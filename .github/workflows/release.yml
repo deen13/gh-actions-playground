@@ -8,8 +8,11 @@ jobs:
   rollout-staging:
     if: github.event.release.prerelease
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Test Output
-        run: echo "Prerelease"
+        run: echo "Prerelease $VERSION"
+        env:
+          VERSION: ${{ github.event.release.tag_name }}
+
