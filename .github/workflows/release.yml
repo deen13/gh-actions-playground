@@ -1,0 +1,15 @@
+name: release
+
+on:
+  release:
+    types: [published, edited, released]
+
+jobs:
+  rollout-staging:
+    if: github.event.release.prerelease
+
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Test Output
+        run: echo "Prerelease"
