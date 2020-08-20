@@ -17,7 +17,7 @@ jobs:
           VERSION: ${{ github.event.release.tag_name }}
 
   rollout-production:
-    if: !github.event.release.prerelease
+    if: "!github.event.release.prerelease"
 
     runs-on: ubuntu-latest
 
