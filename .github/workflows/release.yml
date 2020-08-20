@@ -16,3 +16,14 @@ jobs:
         env:
           VERSION: ${{ github.event.release.tag_name }}
 
+  rollout-production:
+    if: !github.event.release.prerelease
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test Output
+        run: echo "Yay! Release $VERSION"
+        env:
+          VERSION: ${{ github.event.release.tag_name }}
+
