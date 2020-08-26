@@ -33,6 +33,6 @@ jobs:
           SLACK_CHANNEL: ${{ secrets.CHANNEL_NAME }}
           SLACK_ICON: https://avatars3.githubusercontent.com/u/32634858?size=48
           SLACK_MESSAGE: ${{ github.event.release.tag_name }}
-          SLACK_TITLE: 'Das neue Production Release ist da! :rocket:'
+          SLACK_TITLE: 'Hello from Github Actions :rocket:'
           SLACK_USERNAME: Geoffrey
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
